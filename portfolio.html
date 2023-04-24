@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="styles/stylesagain.css">
+</head>
+<body>
+    <header>
+    <!-- carousel -->
+    <div id='fancy-carousel'>
+        <img src="https://images.unsplash.com/photo-1470208564179-dd5b52a0d010?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Two dogs playing">
+        <img src="https://images.unsplash.com/photo-1516219977482-2fd38ba6b6e2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Two dogs looking at something">
+        <img src="https://images.unsplash.com/photo-1557339040-9fd1f2e3a904?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="A dog">
+      </div>
+      
+      <!-- carusel end-->
+      <!-- nav bar -->
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+         <!-- nav end -->
+      </header>
+   <!-- image grid thing -->
+   <div class="image-grid">
+    <img src="img/Witchabellla.png" alt="witch">
+    <img src="img/Witchabellla.png" alt="witch">
+    <img src="img/Witchabellla.png" alt="witch">
+    <img src="img/Witchabellla.png" alt="witch">
+    <img src="img/Witchabellla.png" alt="witch">
+    <img src="img/Witchabellla.png" alt="witch">
+  </div>
+  
+<!-- image grid end -->
+      <footer>
+        <script>
+            var fancyCarousel = document.getElementById('fancy-carousel');
+if (fancyCarousel && fancyCarousel.hasChildNodes()) {
+  var imagesWrapper = document.createElement('div');
+  var controlsWrapper = document.createElement('div');
+  var prevArrow = document.createElement('div');
+  var nextArrow = document.createElement('div');
+  fancyCarousel.classList.add('fancy-carousel--active')
+  imagesWrapper.classList.add('fancy-carousel__images-wrapper');
+  controlsWrapper.classList.add('fancy-carousel__controls-wrapper');
+  prevArrow.classList.add('fancy-carousel__prev-arrow');
+  nextArrow.classList.add('fancy-carousel__next-arrow');
+  controlsWrapper.appendChild(prevArrow);
+  controlsWrapper.appendChild(nextArrow);
+  fancyCarousel.appendChild(imagesWrapper);
+  fancyCarousel.appendChild(controlsWrapper);
+
+  var childNodes = fancyCarousel.childNodes;
+  var imagesArray = [];
+  for (var i = 0; i < childNodes.length; i++) {
+    var currentNode = childNodes[i];
+    if (currentNode.nodeName === 'IMG') {
+      imagesArray.push(currentNode.src);
+      currentNode.classList.add('hide');
+    }
+  }
+
+  imagesWrapper.style.backgroundImage = `url(${imagesArray[0]})`;
+
+  var currentImage = 0;
+  var numberOfImages = imagesArray.length;
+
+  prevArrow.addEventListener('click', function() {
+    handleSlideshowArrow('prev')
+  });
+  nextArrow.addEventListener('click', function() {
+    handleSlideshowArrow('next')
+  });
+
+  function handleSlideshowArrow(val) {
+    if (val === 'prev') {
+      if (currentImage > 0) {
+        currentImage--;
+      } else {
+        currentImage = (numberOfImages - 1);
+      }
+    } else if (val === 'next') {
+      if (currentImage < (numberOfImages - 1)) {
+        currentImage++;
+      } else {
+        currentImage = 0;
+      }
+    }
+    imagesWrapper.classList.add('fade-out');
+    imagesWrapper.addEventListener('transitionend', handleTransitionEnd);
+  }
+  
+  function handleTransitionEnd() {
+    imagesWrapper.removeEventListener('transitionend', handleTransitionEnd);
+    imagesWrapper.style.backgroundImage = 'url(' + imagesArray[currentImage] + ')';
+    imagesWrapper.classList.remove('fade-out');
+  }
+  
+  // set automatic interval
+  var interval = setInterval(function() {
+    handleSlideshowArrow('next');
+  }, 5000); // change the interval time (in milliseconds) to your desired value
+}
+
+// <!-- JavaScript code for navbar -->
+
+  const navbar = document.querySelector('.navbar');
+  const foldHeight = window.innerHeight;
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > foldHeight) {
+      navbar.classList.add('navbar--hidden');
+    } else {
+      navbar.classList.remove('navbar--hidden');
+    }
+  });
+        </script>
+      </footer>
+</body>
+</html>
