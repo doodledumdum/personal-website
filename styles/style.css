@@ -642,9 +642,10 @@ body {
   justify-content: center;
   background: white;
   box-shadow: 0.25em 0.25em 2em rgba(55, 49, 38, 0.5);
- 
+  max-width: 100%;
 }
 
 .work__image {
-  width: 100%;
+  width: 40%;
+
 }
