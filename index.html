@@ -4,57 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>DoodleDumDum Home</title>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-<nav>
-<div>
-    <ul>
-        <li><a href="portfolio.html">portfolio</a></li>
-        <li><a href="portfolio.html">portfolio</a></li>
-        <li><a href="portfolio.html">portfolio</a></li>
-    </ul>
-</div>
-</nav>
-    </header>
-
-<div class="imgcards">
-    <div>
-        <a href="portfolio.html"><img src="img/GreenhouseWitch.jpg" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-    <div>
-        <a href="portfolio.html"><img src="img/FlowersWitch.jpg" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-    <div>
-        <a href="portfolio.html"><img src="img/WaterWitch.jpg" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-    <div>
-        <a href="portfolio.html"><img src="img/GreenhouseWitch.png" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-    <div>
-        <a href="portfolio.html"><img src="img/FlowersWitch.jpg" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-    <div>
-        <a href="portfolio.html"><img src="img/WaterWitch.jpg" alt="garden witch"></a>
-        <h2>Portfolio</h2>
-    </div>
-</div>
-
-    <footer>
-        <div>
-           <ul>
+    <!-- header -->
+    <header class="header">
+        <a href="index.html"><img src="img/logo.svg" class="logo" alt="doodledumdum logo"></a>
+          <input aria-label="idk" class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+          <ul class="menu">
+            <li><a href="index.html">home</a></li>
+            <li><a href="shop.html">shop</a></li>
             <li><a href="portfolio.html">portfolio</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
-           </ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <!-- <li><a href="blog.html">blog</a></li> -->
+          </ul>
+      </header>
+    <!-- end header -->
+    <!-- paralax -->
+    <div class="home-section">
+        <img src="img/tulip-light.svg" alt="Stars overlay" id="stars">
+        <img src="img/tulip.svg" alt="Mountains back" id="mountains_back">
+        <img src="img/logorhmmmm.svg" alt="Moon" id="moon">
+        <img src="img/tulip-yellow.svg" alt="Mountains front" id="mountains_front">
+      </div>
+    <!-- paralax end -->
+<!-- img grid -->
+<div class="work__grid">
+    <div class="work__item">
+      <div class="work__image">
+        <img src="img/grid/FlowersWitch.webp" alt="art piece">
+      </div>
+    </div>
+    <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/GDES_222_FALL2022_ONEPAGE_COMPASSORANGE_MADDIE_ROUGEUX.webp" alt="art piece">
         </div>
-    </footer>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/GDES_222_FALL2022_PATISSERIE_MADDIE_ROUGEUX.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/GDES_223_SPRING2023_MESSAGESTHATMATTER_MADDIE_ROUGEUX.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/GDES_223_SPRING2023_PNW_WRAPPING_PAPER_MADDIE_ROUGEUX.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/GreenhouseWitch.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/LinkAndKoroks_MADDIE_ROUGEUX.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/Maddie_Rougeux_NorthIdahoCollege_2023.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/meowmeow.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/OpalAkira.webp" alt="art piece">
+        </div>
+      </div>
+      <div class="work__item">
+        <div class="work__image">
+          <img src="img/grid/WaterWitch.webp" alt="art piece">
+        </div>
+      </div>
+  </div>
+<!-- img grid end -->
+    <footer>
+        <nav>
+          <div class="foot">
+            <p>
+            <a href="https://www.tiktok.com/@doodle_dumdum" target="_blank" rel="noopener noreferrer" class="socialist">TikTok</a>
+            <a href="https://www.instagram.com/doodle_dumdum/" target="_blank" rel="noopener noreferrer" class="socialist">Instagram</a>
+            <a href="https://twitter.com/doodle_dumdum" target="_blank" rel="noopener noreferrer" class="socialist">Twitter</a>
+          </p>
+          </div>
+        </nav>
+      </footer>
+      <!-- footer ends  -->
+              <!-- javascript -->
+              <script>
+                let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_back = document.getElementById("mountains_back");
+      let mountains_front = document.getElementById("mountains_front");
+      let btn = document.getElementById("btn-letsgo");
+      // let header = document.querySelector("header");
+      
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * .2 + "px";
+        mountains_back.style.top = value * 0.5 + "px";
+        // mountains_front.style.top = value * 0 + "200px";
+      });
+              </script> 
+      
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
